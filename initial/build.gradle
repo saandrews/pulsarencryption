@@ -1,1 +1,22 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+//mainClassName = 'hello.HelloWorld'
+mainClassName = 'hello.SampleCryptoProducer'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.apache.pulsar:pulsar-client:1.20.0-incubating"
+}
+
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
